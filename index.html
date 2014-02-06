@@ -42,7 +42,7 @@
 					<h1>Version Control</h1>
 					<h3>With git and SourceKettle</h3>
 					<p><small>Tom Blount</small></p>
-                    <p><small>Sildes available at: <a href="http://tomblount.co.uk/version-control"></a>http://tomblount.co.uk/version-control</small></p>
+                    <p><small>Sildes available at: <a href="http://tomblount.co.uk/version-control">http://tomblount.co.uk/version-control</a></small></p>
                     <p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB" rel="license">
                         <img src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" style="border-width:0" alt="Creative Commons Licence"></img>
                     </a></p>
@@ -50,69 +50,181 @@
                 
                 <section>
 					<h2>Introduction</h2>
-					<p>
-						<ul>
-                            <li>What is version control?</li><br/>
-                            <li>What is SourceKettle?</li><br/>
-                            <li>What is git?</li><br/>
-                        </ul>
-					</p>
+                    <ul>
+                        <li>What is version control?</li><br/>
+                        <li>What is SourceKettle?</li><br/>
+                        <li>What is git?</li><br/>
+                    </ul>
 				</section>
 
 				<section>
                     <section>
                         <h2>Version control</h2>
-                        <p>
-                            Also called source control, revision control, source management...
-                        </p>
-                        <p>
-                            Boils down to: keeping your work safe
-                        </p>
+                        <ul>
+                            <li>Also called source control, revision control, source management...</li><br/>
+                            <li>Boils down to: keeping your work safe</li><br/>
+                        </ul>
                     </section>
                     
                     <section>
                         <h2>Version control</h2>
-                        <p>
-                            Maintains a history of work on a project
-                        </p>
+                        <ul>
+                            <li>Maintains a history of work on a project in a <strong><em>repository</em></strong></li><br/>
+                            <li>Repositories can be <strong><em>local</em></strong> or <strong><em>remote</em></strong></li><br/>
+                            <li><strong><em>Distributed</em></strong>repositories are shared across multiple machines</strong></li><br/>
+                    </section>
+                    <section>
+                        <h2>Version control</h2>
+                        <ul>
+                            <li>Can revert to previous versions</li><br/>
+                            <li>Prevents access conflicts</li><br/>
+                            <li>Allows branching</li><br/>
+                        </ul>
                     </section>
                 </section>
                 
                 <section>
                     <section>
                         <h2>SourceKettle</h2>
-                        <p>
-                            Stores your code repositories
-                        </p>
-                        <p>
-                            <a href="https://sourcekettle.ecs.soton.ac.uk/">https://sourcekettle.ecs.soton.ac.uk/</a>
-                        </p>
+                        <ul>
+                            <li><a href="https://sourcekettle.ecs.soton.ac.uk/">https://sourcekettle.ecs.soton.ac.uk/</a></li><br/>
+                            <li>Stores your code repositories on a remote server</li><br/>
+                            <li>Built with agile development in mind</li><br/>
+                            <li>In continuous development (beware of bugs!)</li><br/>
+                        </ul>
                     </section>
                     
                     <section>
                         <h2>SourceKettle</h2>
-                        <p>
-                            Maintains a history of work on a project
-                        </p>
+                        <p>Creating a project:</p>
+                        <figure>
+                            <img src="assets/01-create-project.png"/>
+                        </figure>
+                    </section>
+                    <section>
+                        <h2>SourceKettle</h2>
+                        <p>Creating a milestone:</p>
+                        <figure>
+                            <img src="assets/02-create-milestone.png"/>
+                        </figure>
+                    </section>
+                    <section>
+                        <h2>SourceKettle</h2>
+                        <p>Creating a task:</p>
+                        <figure>
+                            <img src="assets/03-create-task.png"/>
+                        </figure>
                     </section>
                 </section>
                 
                 <section>
                     <section>
                         <h2>Git</h2>
+                        <ul>
+                            <li>One of the many version control tools</li><br/>
+                            <li>Windows: <a href="http://msysgit.github.io/">http://msysgit.github.io/</a></li><br/>
+                            <li>Linux: sudo apt-get install git</li><br/>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Setting up git:</p>
                         <pre><code>
-                            Tom@ECS ~/Documents/SEG_Project
-                            $ git init
+Tom@ECS ~/Documents/SEG_Project
+$ git config --global user.name "Tom"
+$ git config --global user.email tb12g09@ecs.soton.ac.uk
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Initialising a (local) repository:</p>
+                        <pre><code>
+Tom@ECS ~/Documents/SEG_Project
+$ git init
+Initialized empty Git repository in C:/Users/Tom/Documents/SEG_Project/.git/
                         </code></pre>
                     </section>
                     
                     <section>
                         <h2>Git</h2>
+                        <p>Checking the status:</p>
                         <pre><code>
-                            Tom@ECS ~/Documents/SEG_Project
-                            $ git status
+Tom@ECS ~/Documents/SEG_Project (master)
+$ git status
+# On branch master
+#
+# Initial commit
+#
+nothing to commit (create/copy files and use "git add" to track)
                         </code></pre>
                     </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Creating and adding a file:</p>
+                        <pre><code>
+Tom@ECS ~/Documents/SEG_Project (master)
+$ touch README
+$ git add README
+$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+# (use "git rm --cached &lt;file&gt;..." to unstage)
+#
+#       new file: README
+#
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Committing a file:</p>
+                        <pre><code>
+Tom@ECS ~/Documents/SEG_Project (master)
+$ git commit -am "Added README file"
+[master (root-commit) d616bbe] Added a README
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+  create mode 10064 README
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Connecting to a remote repository:</p>
+                        <pre><code>
+Tom@ECS ~/Documents/SEG_Project (master)
+$ git remote add origin git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
+                        </code></pre>
+                        <p><strong>You'll need to set up a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this!</strong></p>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Pushing/pulling changes to/from the remote server:
+                        <br/>(You need to be on the VPN to use this)</p>
+                        <pre><code>
+Tom@ECS ~/Documents/SEG_Project (master)
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 215 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
+ * [new branch]     master -> master
+Branch master set up to track remote branch master from origin
+
+$ git pull
+Already up-to-date
+                        </code></pre>
+                        <p><strong>Hint:</strong> always do a <em>pull</em> before you <em>push</em>!</p>
+                    </section>
+                </section>
+                
+                <section>
+                    <h2>Other Tutorials</h2>
+                    <ul>
+                        <li><a href="http://try.github.io">Git basics</a></li><br/>
+                        <li><a href="http://www.vogella.com/tutorials/Git/article.html">In-depth tutorial</a></li><br/>
+                        <li><a href="https://help.github.com/articles/generating-ssh-keys">Generating SSH keys</a></li><br/>
+                    </ul>
                 </section>
                 
 			</div>

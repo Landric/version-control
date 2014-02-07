@@ -158,6 +158,7 @@ Tom@ECS ~/Documents/SEG_Project (master)
 $ touch README
 $ git add README
 $ git status
+
 # On branch master
 #
 # Initial commit
@@ -175,6 +176,7 @@ $ git status
                         <pre><code>
 Tom@ECS ~/Documents/SEG_Project (master)
 $ git commit -am "Added README file"
+
 [master (root-commit) d616bbe] Added a README
  1 file changed, 0 insertions(+), 0 deletions(-)
   create mode 10064 README
@@ -196,6 +198,7 @@ $ git remote add origin git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.gi
                         <pre><code>
 Tom@ECS ~/Documents/SEG_Project (master)
 $ git push -u origin master
+
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 215 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
@@ -207,6 +210,24 @@ $ git pull
 Already up-to-date
                         </code></pre>
                         <p><strong>Hint:</strong> always do a <em>pull</em> before you <em>push</em>!</p>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Accessing an existing project:</p>
+                        <pre><code>
+Tom@ECS ~/Documents
+$ git clone git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
+
+Cloning into 'SEG_Project'...
+remote: Counting objects: 4051, done.
+remote: Compressing objects: 100% (2824/2824), done.
+remote: Total 4051 (delta 1170), reused 4051 (delta 1170)
+Receiving objects: 100% (4051/4051), 2.10 MiB | 314.00 KiB/s, done.
+Resolving deltas: 100% (1170/1170), done.
+Checking connectivity... done.
+Checking out files: 100% (1384/1384), done.
+                        </code></pre>
+                        <p><strong>You'll need to set up a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this!</strong></p>
                     </section>
                 </section>
                 

@@ -79,10 +79,25 @@
                     <section>
                         <h2>Git</h2>
                         <ul>
-                            <li>One of many version control tools</li><br/>
-                            <li>Windows: <a href="http://msysgit.github.io/">http://msysgit.github.io/</a></li><br/>
-                            <li>Linux: sudo apt-get install git</li><br/>
+                            <li>Command-line tools:</li>
+                            <ul>
+                                <li>Windows: <a href="http://msysgit.github.io/">http://msysgit.github.io/</a></li>
+                                <li>Linux: sudo apt-get install git</li>
+                            </ul><br/>
+                            <li>GUIs:</li>
+                            <ul>
+                                <li><a href="https://code.google.com/p/tortoisegit/">TortoiseGit</a> (Windows)</li>
+                                <li><a href="http://gitx.frim.nl/">GitX</a> (Mac)</li>
+                                <li>Also plugins for IDEs such as Eclipse</li>
+                            </ul>
                         </ul>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
+                        <p>Overview:</p>
+                        <figure>
+                            <img src="assets/git-flow/01-workflow.png"/>
+                        </figure>
                     </section>
                     <section>
                         <h2>Git</h2>
@@ -102,7 +117,24 @@ $ git init
 Initialized empty Git repository in C:/Users/Tom/Documents/SEG_Project/.git/
                         </code></pre>
                     </section>
-                    
+                    <section>
+                        <h2>Git</h2>
+                        <p>Accessing an existing project:</p>
+                        <pre><code>
+Tom@ECS ~/Documents
+$ git clone git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
+
+Cloning into 'SEG_Project'...
+remote: Counting objects: 4051, done.
+remote: Compressing objects: 100% (2824/2824), done.
+remote: Total 4051 (delta 1170), reused 4051 (delta 1170)
+Receiving objects: 100% (4051/4051), 2.10 MiB | 314.00 KiB/s, done.
+Resolving deltas: 100% (1170/1170), done.
+Checking connectivity... done.
+Checking out files: 100% (1384/1384), done.
+                        </code></pre>
+                        <p><strong>You'll need to set up a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this!</strong></p>
+                    </section>
                     <section>
                         <h2>Git</h2>
                         <p>Checking the status:</p>
@@ -178,22 +210,19 @@ Already up-to-date
                         <p><strong>Hint:</strong> always do a <em>pull</em> before you <em>push</em>!</p>
                     </section>
                     <section>
+                        <h2>Git: Conflicts</h2>
+                        <ul>
+                            <li>Git will try to handle people modifying the same file</li><br/>
+                            <li>Git will show a conflict if people modify the same line of the same file</li><br/>
+                            <li>To fix: edit the file to the "correct" version and recommit</li><br/>
+                        </ul>
+                    </section>
+                    <section>
                         <h2>Git</h2>
-                        <p>Accessing an existing project:</p>
-                        <pre><code>
-Tom@ECS ~/Documents
-$ git clone git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
-
-Cloning into 'SEG_Project'...
-remote: Counting objects: 4051, done.
-remote: Compressing objects: 100% (2824/2824), done.
-remote: Total 4051 (delta 1170), reused 4051 (delta 1170)
-Receiving objects: 100% (4051/4051), 2.10 MiB | 314.00 KiB/s, done.
-Resolving deltas: 100% (1170/1170), done.
-Checking connectivity... done.
-Checking out files: 100% (1384/1384), done.
-                        </code></pre>
-                        <p><strong>You'll need to set up a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this!</strong></p>
+                        <p>Overview (again):</p>
+                        <figure>
+                            <img src="assets/git-flow/02-git-commands.png"/>
+                        </figure>
                     </section>
                 </section>
                 

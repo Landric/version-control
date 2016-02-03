@@ -225,21 +225,19 @@ $ git remote add origin git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.gi
                     </section>
                     <section>
                         <h2>Git</h2>
-                        <p>Pushing/pulling changes to/from the remote server:
-                        <br/>(You need to be on the VPN to use this)</p>
+                        <p>Pulling/pushing changes from/to the remote server:
                         <pre><code>
 Tom@ECS ~/Documents/SEG_Project (master)
-$ git push -u origin master
+$ git pull -u origin master
+Already up-to-date
 
+$ git push
 Counting objects: 3, done.
 Writing objects: 100% (3/3), 215 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
  * [new branch]     master -> master
 Branch master set up to track remote branch master from origin
-
-$ git pull
-Already up-to-date
                         </code></pre>
                         <p><strong>Hint:</strong> always do a <em>pull</em> before you <em>push</em>!</p>
                     </section>

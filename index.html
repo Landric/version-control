@@ -50,7 +50,7 @@
 			<div class="slides">
 				<section>
 					<h1>Version Control</h1>
-					<h3>With git and SourceKettle</h3>
+					<h3>And Project Management</h3>
 					<p><small>Tom Blount</small></p>
                     <p><small>Sildes available at: <a href="http://tomblount.co.uk/version-control">http://tomblount.co.uk/version-control</a></small></p>
                     <p><a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB" rel="license">
@@ -63,7 +63,7 @@
                     <ul>
                         <li>What is version control?</li><br/>
                         <li>What is git?</li><br/>
-                        <li>What is SourceKettle?</li><br/>
+                        <li>How to manage collaborative projects?</li><br/>
                     </ul>
 				</section>
 
@@ -128,6 +128,13 @@
                     </section>
                     <section>
                         <h2>Git</h2>
+                        <figure>
+                            <img src="assets/xkcd.png" width="35%">
+                        </figure>
+                        <small>source: <a href="https://xkcd.com/1597/">xkcd</a></small>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
                         <p>Overview:</p>
                         <figure>
                             <img src="assets/git-flow/01-workflow.png" width="35%"/>
@@ -153,6 +160,15 @@ Initialized empty Git repository in C:/Users/Tom/Documents/SEG_Project/.git/
                     </section>
                     <section>
                         <h2>Git</h2>
+                        <p>Connecting to a remote repository:</p>
+                        <pre><code>
+Tom@ECS ~/Documents/SEG_Project (master)
+$ git remote add origin git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
+                        </code></pre>
+                        <p><strong>(You might need a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this)</strong></p>
+                    </section>
+                    <section>
+                        <h2>Git</h2>
                         <p>Accessing an existing project:</p>
                         <pre><code>
 Tom@ECS ~/Documents
@@ -167,7 +183,7 @@ Resolving deltas: 100% (1170/1170), done.
 Checking connectivity... done.
 Checking out files: 100% (1384/1384), done.
                         </code></pre>
-                        <p><strong>You'll need to set up a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this!</strong></p>
+                        <p><strong>(You might need a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this too)</strong></p>
                     </section>
                     <section>
                         <h2>Git</h2>
@@ -216,15 +232,6 @@ $ git commit -am "Added README file"
                     </section>
                     <section>
                         <h2>Git</h2>
-                        <p>Connecting to a remote repository:</p>
-                        <pre><code>
-Tom@ECS ~/Documents/SEG_Project (master)
-$ git remote add origin git@sourcekettle.ecs.soton.ac.uk:projects/SEG_Project.git
-                        </code></pre>
-                        <p><strong>You'll need to set up a <a href="https://help.github.com/articles/generating-ssh-keys">Public Key</a> to be able to do this!</strong></p>
-                    </section>
-                    <section>
-                        <h2>Git</h2>
                         <p>Pulling/pushing changes from/to the remote server:
                         <pre><code>
 Tom@ECS ~/Documents/SEG_Project (master)
@@ -260,85 +267,92 @@ Branch master set up to track remote branch master from origin
                 
                 <section>
                     <section>
+                        <h2>Project Management</h2>
+                        <ul>
+                            <li>Milestones/Kanban</li><br/>
+                            <li>Burndown Charts/Timesheets</li><br/>
+                            <li>SourceKettle/Trello</li><br/>
+                        </ul>
+                    </section>
+                    <section>
                         <h2>SourceKettle</h2>
                         <ul>
                             <li><a href="https://sourcekettle.ecs.soton.ac.uk/">https://sourcekettle.ecs.soton.ac.uk/</a></li><br/>
-                            <li>Stores your code repositories on a server in ECS</li><br/>                            
-                            <li>Dynamic Task Tracking</li><br/>
-                            <li>Time Tracking</li><br/>
-                            <li>Kanban/Timesheets/Burndown Charts</li><br/>
+                            <li><strong>Not currently supported:</strong> use at your own risk</li><br/>                            
                         </ul>
                     </section>
-                    
                     <section>
-                        <h2>SourceKettle: Projects</h2>
-                        <p>The project page:</p>
-                        <figure>
-                            <img src="assets/sourcekettle/01a-projects-page.png"/>
-                        </figure>
-                    </section>
-                    <section>
-                        <h2>SourceKettle: Projects</h2>
-                        <p>Creating a project:</p>
-                        <figure>
-                            <img src="assets/sourcekettle/01b-create-project.png"/>
-                        </figure>
-                    </section>
-                    <section>
-                        <h2>SourceKettle: Milestones</h2>
-                        <p>The milestone page:</p>
+                        <h2>SourceKettle</h2>
+                        <h4>Milestones and Kanbans</h4>
                         <figure>
                             <img src="assets/sourcekettle/02a-milestones-page.png"/>
                         </figure>
                     </section>
                     <section>
-                        <h2>SourceKettle: Milestones</h2>
-                        <p>Creating a milestone:</p>
-                        <figure>
-                            <img src="assets/sourcekettle/02b-create-milestone.png"/>
-                        </figure>
-                    </section>
-                    <section>
-                        <h2>SourceKettle: Tasks</h2>
-                        <p>The task page:</p>
+                        <h2>SourceKettle</h2>
+                        <h4>Milestones and Kanbans</h4>
                         <figure>
                             <img src="assets/sourcekettle/03a-tasks-page.png"/>
                         </figure>
                     </section>
                     <section>
-                        <h2>SourceKettle: Tasks</h2>
-                        <p>Creating a task:</p>
-                        <figure>
-                            <img src="assets/sourcekettle/03b-create-task.png"/>
-                        </figure>
-                    </section>
-                    <section>
-                        <h2>SourceKettle: Charts</h2>
-                        <p>Schedule:</p>
-                        <figure>
-                            <img src="assets/sourcekettle/04a-schedule.png"/>
-                        </figure>
-                    </section>
-                    <section>
-                        <h2>SourceKettle: Charts</h2>
-                        <p>Burndown:</p>
+                        <h2>SourceKettle</h2>
+                        <h4>Burndown</h4>
                         <figure>
                             <img src="assets/sourcekettle/04b-burndown.png"/>
                         </figure>
                     </section>
                     <section>
-                        <h2>SourceKettle: Charts</h2>
-                        <p>Time distribution:</p>
+                        <h2>SourceKettle</h2>
+                        <h4>Timesheets</h4>
                         <figure>
                             <img src="assets/sourcekettle/04c-time.png"/>
                         </figure>
                     </section>
                     <section>
-                        <h2>SourceKettle: Charts</h2>
-                        <p>Timesheets:</p>
+                        <h2>SourceKettle</h2>
+                        <h4>Timesheets</h4>
                         <figure>
                             <img src="assets/sourcekettle/04d-timesheets.png"/>
                         </figure>
+                    </section>
+                    <section>
+                        <h2>Trello</h2>
+                        <ul>
+                            <li><a href="https://trello.com/">https://trello.com/</a></li><br/>
+                            <li>Web-based project management app</li><br/>                            
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Trello</h2>
+                        <h4>Milestones and Kanbans</h4>
+                        <figure>
+                            <img src="assets/trello/trello1.png"/>
+                        </figure>
+                    </section>
+                    <section>
+                        <h2>Trello</h2>
+                        <h4>Milestones and Kanbans</h4>
+                        <figure>
+                            <img src="assets/trello/trello2.png"/>
+                        </figure>
+                    </section>
+                    <section>
+                        <h2>Trello</h2>
+                        <h4>Burndown</h4>
+                        <figure>
+                            <img src="assets/trello/trello3.png"/>
+                        </figure>
+                        <small><a href="http://scrumfortrello.com/">http://scrumfortrello.com/</a></small>
+                    </section>
+                    <section>
+                        <h2>Trello</h2>
+                        <h4>Burndown</h4>
+                        <figure>
+                            <img src="assets/trello/trello4.png" width="40%"/>
+                        </figure>
+                        <small><a href="https://www.burndownfortrello.com/">https://www.burndownfortrello.com/</a></small><br/>
+                        <small><strong>Note: </strong> Can't edit with a free account</small>
                     </section>
                 </section>
                 
@@ -346,9 +360,9 @@ Branch master set up to track remote branch master from origin
                     <section>
                         <h2>Summary</h2>
                         <ul>
-                            <li>Overview of what version control is, and why you should use it</li><br/>
+                            <li>Overview of version control and why you should use it</li><br/>
                             <li>Brief introduction to setting up a git repo</li><br/>
-                            <li>Setting up projects, milestones and tasks in SourceKettle</li><br/>
+                            <li>Milestones, kanbans, burndowns and timesheets</li><br/>
                             <li>Slides available at: <a href="http://tomblount.co.uk/version-control">http://tomblount.co.uk/version-control</a></li><br/>
                         </ul>
                     </section>
